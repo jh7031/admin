@@ -1,0 +1,6 @@
+.context {
+  flex-basis: 300px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: left;
+}

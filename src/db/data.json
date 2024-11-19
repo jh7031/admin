@@ -1,0 +1,171 @@
+{
+  "login": [
+    {
+      "user_id": "admin",
+      "role": 1111,
+      "token": "start,...payload...,end",
+      "id": "7c3f"
+    }
+  ],
+  "orgs": [
+    {
+      "org_id": "org1",
+      "org_name": "사업부",
+      "id": "6ed5"
+    },
+    {
+      "org_id": "org2",
+      "org_name": "관리",
+      "id": "68d8"
+    },
+    {
+      "org_id": "org3",
+      "org_name": "기타",
+      "id": "51bd"
+    }
+  ],
+  "depts": [
+    {
+      "dept_no": "FO",
+      "dept_name": "FO",
+      "p_rel": "org1",
+      "id": "07bc"
+    },
+    {
+      "dept_no": "GL",
+      "dept_name": "GL",
+      "p_rel": "org1",
+      "id": "535f"
+    },
+    {
+      "dept_no": "MK",
+      "dept_name": "MK",
+      "p_rel": "org1",
+      "id": "8b43"
+    },
+    {
+      "dept_no": "SB",
+      "dept_name": "SB",
+      "p_rel": "org1",
+      "id": "f24e"
+    },
+    {
+      "dept_no": "SI",
+      "dept_name": "SI",
+      "p_rel": "org1",
+      "id": "b6e3"
+    },
+    {
+      "dept_no": "SP",
+      "dept_name": "SP",
+      "p_rel": "org1",
+      "id": "b36e"
+    }
+  ],
+  "years": [
+    {
+      "year": 2024,
+      "label": "2024",
+      "id": "b2f8"
+    },
+    {
+      "year": 2023,
+      "label": "2023",
+      "id": "af51"
+    },
+    {
+      "year": 2022,
+      "label": "2022",
+      "id": "1b21"
+    },
+    {
+      "year": 2021,
+      "label": "2021",
+      "id": "92f8"
+    },
+    {
+      "year": 2020,
+      "label": "2020",
+      "id": "9282"
+    },
+    {
+      "year": 2019,
+      "label": "2019",
+      "id": "0da5"
+    },
+    {
+      "year": 2018,
+      "label": "2018",
+      "id": "3180"
+    },
+    {
+      "year": 2017,
+      "label": "2017",
+      "id": "a679"
+    }
+  ],
+  "opratecsts": [
+    {
+      "key": 1,
+      "name": "홍길동",
+      "job_grade": "1",
+      "years_sum": "10",
+      "mon1": "1",
+      "mon2": "1",
+      "mon3": "1",
+      "mon4": "1",
+      "mon5": "1",
+      "mon6": "1",
+      "mon7": "1",
+      "mon8": "1",
+      "mon9": "1",
+      "mon10": "1",
+      "mon11": "1",
+      "mon12": "1",
+      "total": "12",
+      "cur_rate": "100",
+      "year_rate": "100",
+      "id": "1c56"
+    },
+    {
+      "key": 2,
+      "name": "합계",
+      "mon1": "1",
+      "mon2": "1",
+      "mon3": "1",
+      "mon4": "1",
+      "mon5": "1",
+      "mon6": "1",
+      "mon7": "1",
+      "mon8": "1",
+      "mon9": "1",
+      "mon10": "1",
+      "mon11": "1",
+      "mon12": "1",
+      "total": "12",
+      "cur_rate": "100",
+      "year_rate": "100",
+      "id": "8f56"
+    },
+    {
+      "key": 3,
+      "name": "총계",
+      "mon1": "1",
+      "mon2": "1",
+      "mon3": "1",
+      "mon4": "1",
+      "mon5": "1",
+      "mon6": "1",
+      "mon7": "1",
+      "mon8": "1",
+      "mon9": "1",
+      "mon10": "1",
+      "mon11": "1",
+      "mon12": "1",
+      "total": "12",
+      "cur_rate": "100",
+      "year_rate": "100",
+      "id": "96d9"
+    }
+  ]
+}

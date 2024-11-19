@@ -2,6 +2,7 @@ import styles from './OrgSearchBar.module.css';
 import './OrgSearchBar.css';
 import { useEffect, useState } from 'react';
 import { Button, Input, Select, Space, Typography, message } from 'antd';
+import { SearchOutlined } from '@ant-design/icons';
 import ContextContents from '../ContextContents';
 import getFetch from '../../utils/getFetch';
 import convertYearData from '../../utils/convertYearData';
@@ -175,10 +176,10 @@ function OrgSearchBar(props) {
               }}
             />
             <div className="btn">
-            <Button type="primary" htmlType="submit" size="small" shape="round"> 
+            <Button type="primary" htmlType="submit" size="small" shape="round"  icon={<SearchOutlined />} iconPosition="end" style={{ background: "#85b932",fontWeight:700}}> 
               Search
             </Button>
-            <Button size="small" onClick={handleExcel} shape="round">
+            <Button size="small" onClick={handleExcel} shape="round" style={{ color: "#85b932", border: "1px solid #85b932",fontWeight:700 }}>
               Excel
             </Button>
             </div>

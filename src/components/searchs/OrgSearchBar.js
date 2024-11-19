@@ -1,4 +1,5 @@
 import styles from './OrgSearchBar.module.css';
+import './OrgSearchBar.css';
 import { useEffect, useState } from 'react';
 import { Button, Input, Select, Space, Typography, message } from 'antd';
 import ContextContents from '../ContextContents';
@@ -89,21 +90,30 @@ function OrgSearchBar(props) {
   return (
     <div className={styles.container}>
       <div className={styles.title}>
-        <Typography.Text>▶{props.title}</Typography.Text>
+        <Typography.Text
+        style={{ fontSize: '1.4em' }}
+        >▶{props.title}</Typography.Text>
       </div>
       <div className={styles.count}>
-        <Typography.Text>▶총 {count}건</Typography.Text>
+        <Typography.Text
+        style={{ fontSize: '1.4em' }}
+        >▶총 {count}건</Typography.Text>
       </div>
       <ContextContents contents={props.contents} />
-      <div className={styles.search}>
+      <div className={`${styles.search} search-div`}>
         <form onSubmit={handleSubmit}>
           <Space className={styles.space}>
-            <Typography.Text>년도:</Typography.Text>
+            <Typography.Text
+            style={{ fontSize: '1.4em' }}
+            >
+              년도:
+            </Typography.Text>
             <Select
               id="year"
               name="biz_year"
               size="small"
-              style={{ width: 80 }}
+              className="select-box"
+              style={{ width: '100%' }}
               options={yearInfo.map((info) => ({
                 value: info.year,
                 label: info.label,
@@ -113,12 +123,15 @@ function OrgSearchBar(props) {
                 setSelectedYear(value);
               }}
             />
-            <Typography.Text>사업부:</Typography.Text>
+            <Typography.Text
+              style={{ fontSize: '1.4em' }}
+            >사업부:
+            </Typography.Text>
             <Select
               id="group"
               name="org_group"
               size="small"
-              style={{ width: 80 }}
+              style={{ width: '100%' }}
               options={orgInfo.map((info) => ({
                 value: info.org_id,
                 label: info.org_name,
@@ -129,12 +142,15 @@ function OrgSearchBar(props) {
                 setSelectedDeptNo(null);
               }}
             />
-            <Typography.Text>조직:</Typography.Text>
+            <Typography.Text
+              style={{ fontSize: '1.4em' }}
+            >조직:
+            </Typography.Text>
             <Select
               id="dept"
               name="org_dept"
               size="small"
-              style={{ width: 80 }}
+              style={{ width: '100%' }}
               options={deptInfo.map((info) => ({
                 value: info.dept_no,
                 label: info.dept_name,
@@ -144,23 +160,28 @@ function OrgSearchBar(props) {
                 setSelectedDeptNo(value);
               }}
             />
-            <Typography.Text>성명:</Typography.Text>
+            <Typography.Text
+              style={{ fontSize: '1.4em' }}
+              >성명:
+              </Typography.Text>
             <Input
               id="emp_name"
               name="org_emp_name"
               size="small"
-              style={{ width: 80 }}
+              style={{ width: '100%' }}
               value={selectedEmpName}
               onChange={(event) => {
                 setSelectedEmpName(event.currentTarget.value);
               }}
             />
-            <Button type="primary" htmlType="submit" size="small">
+            <div className="btn">
+            <Button type="primary" htmlType="submit" size="small" shape="round"> 
               Search
             </Button>
-            <Button size="small" onClick={handleExcel}>
+            <Button size="small" onClick={handleExcel} shape="round">
               Excel
             </Button>
+            </div>
           </Space>
         </form>
       </div>

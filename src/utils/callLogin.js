@@ -5,7 +5,7 @@ function callLogin(url, body) {
     const response = await fetch(process.env.REACT_APP_HOST + url, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json', // 수정
       },
       body: JSON.stringify(body),
     });

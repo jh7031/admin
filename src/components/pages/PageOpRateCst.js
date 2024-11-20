@@ -95,6 +95,7 @@ function PageOpRateCst(props) {
 
   return (
     <>
+      <h1 className="title">가동률현황</h1>
       <OrgSearchBar
         title="가동률현황"
         contents={contents}
@@ -110,12 +111,6 @@ function PageOpRateCst(props) {
           headerHeight={gridHeight}
           rowHeight={gridHeight}
           rowData={rowData} // Row Data for Rows
-          defaultColDef={{
-            minWidth: 82,
-            resizable: true,
-            sortable: true,
-            autoHeight: true,
-        }}
         />
       </div>
     </>

@@ -5,7 +5,7 @@
     }
 }
 @media screen and (min-width:320px) and (max-width: 768px) {
-    :where(.css-dev-only-do-not-override-tpassh).ant-select-single.ant-select-sm{
+    /* :where(.css-dev-only-do-not-override-tpassh).ant-select-single.ant-select-sm{
         height:4vh;
     }
     :where(.css-dev-only-do-not-override-tpassh).ant-input-sm{
@@ -19,13 +19,13 @@
         .ant-typography{
             margin-left:0.5em;
         }
-    }
-    .btn{
+    } */
+    /* .btn{
         margin-top:20px;
         button{
             width:47%;
             height:4vh;
         }   
-    }
+    } */
 
 }

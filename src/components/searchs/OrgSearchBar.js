@@ -28,7 +28,7 @@ function OrgSearchBar(props) {
     getFetch('years', fullfilledYearData);
   }, []);
 
-  function fullfilledYearData(data) {
+  function fullfilledYearData(data) { 
     const years = convertYearData(data);
     setYearInfo(years.info);
     setSelectedYear(years.selected);

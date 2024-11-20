@@ -1,0 +1,31 @@
+.btn{
+    text-align:center;
+    button{
+        margin: 0 1vw;
+    }
+}
+@media screen and (min-width:320px) and (max-width: 768px) {
+    :where(.css-dev-only-do-not-override-tpassh).ant-select-single.ant-select-sm{
+        height:4vh;
+    }
+    :where(.css-dev-only-do-not-override-tpassh).ant-input-sm{
+        height:4vh;
+    }
+    .search-div{
+        .ant-space-item{
+            margin-bottom: 5px;
+            text-align:left;
+        }
+        .ant-typography{
+            margin-left:0.5em;
+        }
+    }
+    .btn{
+        margin-top:20px;
+        button{
+            width:47%;
+            height:4vh;
+        }   
+    }
+
+}

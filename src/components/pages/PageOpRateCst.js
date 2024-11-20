@@ -95,7 +95,6 @@ function PageOpRateCst(props) {
 
   return (
     <>
-      <h1 className="title">가동률현황</h1>
       <OrgSearchBar
         title="가동률현황"
         contents={contents}

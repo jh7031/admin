@@ -75,6 +75,7 @@ function OrgSearchBar(props) {
         } else {
           message.info('검색된 자료가 없습니다.');
         }
+        
       },
     });
   }
@@ -187,6 +188,7 @@ function OrgSearchBar(props) {
         </form>
       </div>
     </div>
+
   );
 }
 

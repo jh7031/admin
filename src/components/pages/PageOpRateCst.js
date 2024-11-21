@@ -11,6 +11,23 @@ import OrgSearchBar from '../searchs/OrgSearchBar';
 function PageOpRateCst(props) {
   const gridRef = useRef(); // Optional - for accessing Grid's API
   const [rowData, setRowData] = useState([]); // Set rowData to Array of Objects, one Object per Row
+  class Thead {
+    constructor(headerName,field,type,width){
+      this.headerName = headerName;
+      this.field = field;
+      this.type = type;
+      this.width = width;
+    }
+  }
+  
+  const headFnc = (headerName,field,...ot) =>{
+    return {  
+      headerName : headerName,
+      field : field,
+      type : ot[0],
+      width : ot[1],
+    }
+  }
   const columnDefs = [
     {
       headerName: '이름',
@@ -19,21 +36,21 @@ function PageOpRateCst(props) {
       colSpan: (params) =>
         params.data.name === '합계' || params.data.name === '총계' ? 3 : 1,
     },
-    { headerName: '등급', field: 'job_grade', width: 150 },
-    { headerName: '년차', field: 'years_sum', width: 80 },
-    { headerName: '1월', field: 'mon1', type: 'rightAligned', width: 75 },
-    { headerName: '2월', field: 'mon2', type: 'rightAligned', width: 75 },
-    { headerName: '3월', field: 'mon3', type: 'rightAligned', width: 75 },
-    { headerName: '4월', field: 'mon4', type: 'rightAligned', width: 75 },
-    { headerName: '5월', field: 'mon5', type: 'rightAligned', width: 75 },
-    { headerName: '6월', field: 'mon6', type: 'rightAligned', width: 75 },
-    { headerName: '7월', field: 'mon7', type: 'rightAligned', width: 75 },
-    { headerName: '8월', field: 'mon8', type: 'rightAligned', width: 75 },
-    { headerName: '9월', field: 'mon9', type: 'rightAligned', width: 75 },
-    { headerName: '10월', field: 'mon10', type: 'rightAligned', width: 75 },
-    { headerName: '11월', field: 'mon11', type: 'rightAligned', width: 75 },
-    { headerName: '12월', field: 'mon12', type: 'rightAligned', width: 80 },
-    { headerName: '합계', field: 'total', type: 'rightAligned', width: 80 },
+    new Thead('등급','job_grade','', 150 ),
+    headFnc('년차','years_sum','', 80 ),
+    new Thead('1월','mon1','rightAligned', 75 ),
+    new Thead('2월','mon2','rightAligned', 75 ),
+    new Thead('3월','mon3','rightAligned', 75 ),
+    new Thead('4월','mon4','rightAligned', 75 ),
+    new Thead('5월','mon5','rightAligned', 75 ),
+    new Thead('6월','mon6','rightAligned', 75 ),
+    new Thead('7월','mon1','rightAligned', 75 ),
+    new Thead('8월','mon7','rightAligned', 75 ),
+    headFnc('9월','mon9','rightAligned', 75 ),
+    headFnc('10월','mon10','rightAligned', 75 ),
+    headFnc('11월','mon11','rightAligned', 75 ),
+    headFnc('12월','mon12','rightAligned', 80 ),
+    headFnc('합계','total','rightAligned', 80 ),
     {
       headerName: '현가동율',
       field: 'cur_rate_per',
@@ -117,3 +134,27 @@ function PageOpRateCst(props) {
 }
 
 export default PageOpRateCst;
+
+
+let title='admin';
+let body='admin';
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+   body: JSON.stringify({
+     // your expected POST request payload goes here
+      title,
+      body
+      })
+})
+  .then(res => res.json())
+  .then(data => {
+   // enter you logic when the fetch is successful
+    console.log(data)
+  })
+  .catch(error => {
+  // enter your logic for when there is an error (ex. error toast)
+   console.log(error)
+  })  
